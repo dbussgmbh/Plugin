@@ -3,11 +3,13 @@ package com.example.plugins.myplugin;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.router.PageTitle;
 
 import java.util.List;
 import java.util.Map;
 
-/** ✅ Implement your UI here. */
+/** Implement your UI here. */
+
 public class MyPluginView extends Div {
     public MyPluginView(String id, String menu, String subPath, Map<String, List<String>> queryParams) {
         setWidthFull();

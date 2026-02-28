@@ -9,4 +9,8 @@ public interface PluginUi {
     String id();
     String menuLabel();
     Component createView(String subPath, Map<String, List<String>> queryParams);
+
+    default String pageTitle() {
+        return menuLabel();   // Fallback
+    }
 }
