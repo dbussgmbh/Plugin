@@ -25,7 +25,9 @@ public class PluginHostView extends Div implements BeforeEnterObserver {
 
         var plugin  = registry.find(pluginId);
         if (plugin .isEmpty()) { add(new H2("Not found")); add(new Paragraph("No plugin: " + pluginId)); return; }
-        event.getUI().getPage().setTitle(plugin.get().pageTitle());
+
+        var title=plugin.get().pageTitle();
+        event.getUI().access(() -> event.getUI().getPage().setTitle(title));
         Component view = plugin .get().createView(subPath, queryParams);
         add(view);
     }

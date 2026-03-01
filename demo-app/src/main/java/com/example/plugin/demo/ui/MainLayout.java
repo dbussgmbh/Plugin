@@ -29,7 +29,7 @@ public class MainLayout extends AppLayout {
 
         var nav = new SideNav();
         nav.addItem(new SideNavItem("Home", HomeView.class));
-        for (PluginUi p : registry.all()) nav.addItem(new SideNavItem(p.menuLabel(), "p/" + p.id()));
+        for (PluginUi p : registry.all()) nav.addItem(new SideNavItem(p.menuLabel(), p.id()));
         addToDrawer(nav);
     }
 }

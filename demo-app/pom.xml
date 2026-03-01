@@ -19,7 +19,7 @@
     </dependency>
     <dependency>
       <groupId>com.example.plugins</groupId>
-      <artifactId>plugin-myplugin</artifactId>
+      <artifactId>dashboard</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
