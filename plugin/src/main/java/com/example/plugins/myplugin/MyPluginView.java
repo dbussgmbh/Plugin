@@ -3,6 +3,8 @@ package com.example.plugins.myplugin;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.tabs.Tab;
+import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.PageTitle;
 
 import java.util.List;
@@ -19,5 +21,14 @@ public class MyPluginView extends Div {
         add(new Paragraph("subPath: " + subPath));
         add(new Paragraph("queryParams: " + queryParams));
         add(new Paragraph("Replace this view with your UI (Grid, CKEditor, ...)."));
+
+        Tab details = new Tab("Details");
+        Tab payment = new Tab("Payment");
+        Tab shipping = new Tab("Shipping");
+
+        Tabs tabs = new Tabs(details, payment, shipping);
+
+        add(tabs);
+
     }
 }
