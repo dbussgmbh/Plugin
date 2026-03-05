@@ -3,6 +3,8 @@ package com.example.plugins.myplugin;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
+import com.vaadin.flow.component.radiobutton.RadioGroupVariant;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
 import com.vaadin.flow.router.PageTitle;
@@ -29,6 +31,13 @@ public class MyPluginView extends Div {
         Tabs tabs = new Tabs(details, payment, shipping);
 
         add(tabs);
+
+        RadioButtonGroup<String> radioGroup = new RadioButtonGroup<>();
+        radioGroup.addThemeVariants(RadioGroupVariant.LUMO_VERTICAL);
+        radioGroup.setLabel("Travel class");
+        radioGroup.setItems("Economy", "Business", "First Class");
+        add(radioGroup);
+
 
     }
 }
